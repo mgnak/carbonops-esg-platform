@@ -1,5 +1,10 @@
 from django.shortcuts import render
 
+
+
+
+
+
 # Create your views here.
 # # api/views.py
 # from rest_framework import viewsets, status, filters
@@ -94,8 +99,10 @@ from rest_framework.response import Response
 from django.utils import timezone
 from core.models import EmissionRecord, AuditLog
 
+
 class EmissionRecordViewSet(viewsets.ModelViewSet):
     queryset = EmissionRecord.objects.all()
+    serializer_class = EmissionRecordSerializer
     # Use your serializer from before
 
     @action(detail=True, methods=['post'])

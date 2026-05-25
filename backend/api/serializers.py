@@ -20,15 +20,16 @@ class EmissionRecordSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = EmissionRecord
-        fields = [
-            'id', 'company', 'source', 'source_name',
-            'record_date', 'scope', 'category',
-            'raw_amount', 'raw_unit', 'normalized_amount', 'normalized_unit',
-            'original_data', 'raw_file_name',
-            'status', 'flagged_reason',
-            'reviewed_by', 'reviewed_by_username', 'reviewed_at',
-            'created_at', 'updated_at'
-        ]
+        fields = '__all__'
+        # [
+        #     'id', 'company', 'source', 'source_name',
+        #     'record_date', 'scope', 'category',
+        #     'raw_amount', 'raw_unit', 'normalized_amount', 'normalized_unit',
+        #     'original_data', 'raw_file_name',
+        #     'status', 'flagged_reason',
+        #     'reviewed_by', 'reviewed_by_username', 'reviewed_at',
+        #     'created_at', 'updated_at'
+        # ]
         read_only_fields = ['normalized_amount', 'normalized_unit', 'reviewed_by', 'reviewed_at']
 
 
