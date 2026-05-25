@@ -1,6 +1,19 @@
-from django.shortcuts import render
+# from django.urls import path, include
+# from rest_framework.routers import DefaultRouter
+# from .views import CompanyViewSet, DataSourceViewSet, EmissionRecordViewSet
 
-# Create your views here.
+# router = DefaultRouter()
+# router.register(r'companies', CompanyViewSet)
+# router.register(r'datasources', DataSourceViewSet)
+# router.register(r'emission-records', EmissionRecordViewSet)
+
+# urlpatterns = [
+#     path('', include(router.urls)),
+# ]
+
+
+
+
 # ingestion/views.py
 from rest_framework.views import APIView
 from rest_framework.response import Response
