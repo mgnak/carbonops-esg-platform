@@ -1,7 +1,8 @@
 import hashlib
 import pandas as pd
 
-from rest_framework.decorators import api_view
+from rest_framework.decorators import api_view, parser_classes
+from rest_framework.parsers import MultiPartParser, FormParser
 from rest_framework.response import Response
 
 from apps.tenants.models import Tenant
@@ -15,6 +16,7 @@ from .utils import (
 
 
 @api_view(["POST"])
+@parser_classes([MultiPartParser, FormParser])
 def upload_sap_file(request):
 
     if 'file' not in request.FILES:
