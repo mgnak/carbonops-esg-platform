@@ -152,8 +152,9 @@ function App() {
         path="/review"
         element={<ReviewQueue />}
       />
-<Route
-        path="/review"
+
+      <Route
+        path="/audit-logs"
         element={<AuditLogs />}
       />
     </Routes>

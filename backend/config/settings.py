@@ -60,7 +60,7 @@ WSGI_APPLICATION = 'config.wsgi.application'
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = 'sql'
-DEBUG = True
+DEBUG = False#True
 
 DATABASES = {
     'default': {    
